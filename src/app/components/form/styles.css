@@ -1,0 +1,19 @@
+.formBox {
+  > *:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .MuiButton-root {
+    border-radius: 30px;
+    height: 48px;
+
+    .MuiSvgIcon-root {
+      margin-right: 8px;
+    }
+  }
+
+  .buttonReset {
+    margin-right: 16px;
+    min-width: fit-content;
+  }
+}
