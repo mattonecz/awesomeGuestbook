@@ -67,13 +67,13 @@ export const VisitorsTable: React.FC = () => {
         Visitor management
       </Typography>
       <Box padding="6px">
-        <Checkbox checked={rows.some((itm) => itm.checked)} />
         <Button
           onClick={handleRemoveVisitors}
           color="error"
           variant="contained"
+          disabled={!visitors.length}
         >
-          Remove
+          Remove selected
         </Button>
       </Box>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -92,8 +92,12 @@ export const VisitorsTable: React.FC = () => {
                 label={<Typography fontWeight={600}>Visitor</Typography>}
               />
             </TableCell>
-            <TableCell><Typography fontWeight={600}>Email</Typography></TableCell>
-            <TableCell align="right"><Typography fontWeight={600}>Department</Typography></TableCell>
+            <TableCell>
+              <Typography fontWeight={600}>Email</Typography>
+            </TableCell>
+            <TableCell align="right">
+              <Typography fontWeight={600}>Department</Typography>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

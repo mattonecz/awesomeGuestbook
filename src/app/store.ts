@@ -6,7 +6,6 @@ const storageState = localStorage.getItem("guestbookReduxState");
 const persistedState = storageState
   ? JSON.parse(storageState)
   : { visitors: [] };
-console.log(persistedState);
 
 export const store = configureStore({
   reducer: appNameReducer,
